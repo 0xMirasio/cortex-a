@@ -102,8 +102,8 @@ register_bitfields! {u64,
         ],
 
         S OFFSET(4) NUMBITS(1) [
-            Aarch32 = 0,
-            Aarch64 = 1
+            Aarch32 = 1,
+            Aarch64 = 0
         ],
 
         /// AArch64 state (Exception level and selected SP) that an exception was taken from. The
