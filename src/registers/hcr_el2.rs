@@ -39,6 +39,11 @@ register_bitfields! {u64,
             EL1IsAarch64 = 1
         ],
 
+        TWI OFFSET(13) NUMBITS(1) [
+            Disable = 0,
+            Enable = 1
+        ],
+
         /// Default Cacheability.
         ///
         /// 0 This control has no effect on the Non-secure EL1&0 translation regime.
