@@ -112,6 +112,45 @@ register_bitfields! {u64,
             Enable = 1
         ],
 
+        //Reserved value
+        RES5 OFFSET(28) NUMBITS(2) [
+            Enable = 3,
+            Disable = 0
+
+        ],
+
+        RES4 OFFSET(22) NUMBITS(2) [
+            Enable = 3,
+            Disable = 0
+
+        ],
+
+        RES3 OFFSET(1) NUMBITS(1) [
+            Enable = 1,
+            Disable = 0
+
+        ],
+
+        RES2 OFFSET(18) NUMBITS(1) [
+            Enable = 1,
+            Disable = 0
+
+        ],
+
+        RES1 OFFSET(16) NUMBITS(1) [
+            Enable = 1,
+            Disable = 0
+
+        ],
+
+        
+        
+        RES0 OFFSET(4) NUMBITS(2) [
+            Enable = 3,
+            Disable = 0
+
+        ],
+
         /// MMU enable for EL2 or EL2&0 stage 1 address translation. Possible values of this bit are:
         ///
         /// 0 - When HCR_EL2.{E2H, TGE} != {1, 1}, EL2 stage 1 address translation disabled.
