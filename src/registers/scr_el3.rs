@@ -62,6 +62,12 @@ register_bitfields! {u64,
             SmcDisabled = 1
         ],
 
+        // Reserved
+        RES1 OFFSET(4) NUMBITS(2) [
+            reserved_off = 0,
+            reserved_on = 3
+        ],
+
         /// Non-secure bit.
         /// 0 Indicates that EL0 and EL1 are in Secure state.
         ///
