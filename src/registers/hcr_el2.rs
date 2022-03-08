@@ -18,6 +18,23 @@ use tock_registers::{
 
 register_bitfields! {u64,
     pub HCR_EL2 [
+
+
+        NV2  OFFSET(45) NUMBITS(1) [
+            adv_virt_enable = 1,
+            adv_virt_disable = 0
+        ],
+
+        NV1  OFFSET(43) NUMBITS(1) [
+            trap_nvirt_enable = 1,
+            trap_nvirt_disable = 0
+        ],
+
+        NV  OFFSET(42) NUMBITS(1) [
+            nested_virt_enable = 1,
+            nested_virt_disable = 0
+        ],
+
         /// Execution state control for lower Exception levels:
         ///
         /// 0 Lower levels are all AArch32.
@@ -30,10 +47,12 @@ register_bitfields! {u64,
         /// bit has the same value as the SCR_EL3.RW bit for all purposes other than a direct read
         /// or write access of HCR_EL2.
         ///
+        /// 
+        
         /// The RW bit is permitted to be cached in a TLB.
         ///
         /// When ARMv8.1-VHE is implemented, and the value of HCR_EL2.{E2H, TGE} is {1, 1}, this
-        /// field behaves as 1 for all purposes other than a direct read of the value of this bit.
+        /// field behaves as 1 for all purposes other than a direct read of the value of this bit.7
         RW   OFFSET(31) NUMBITS(1) [
             AllLowerELsAreAarch32 = 0,
             EL1IsAarch64 = 1
@@ -43,6 +62,9 @@ register_bitfields! {u64,
             Disable = 0,
             Enable = 1
         ],
+
+        
+
 
         /// Default Cacheability.
         ///
