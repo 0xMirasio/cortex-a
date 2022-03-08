@@ -51,8 +51,10 @@ mod ttbr0_el1;
 mod ttbr0_el2;
 mod ttbr1_el1;
 mod vbar_el1;
+mod vttbr_el2;
 mod vbar_el2;
 
+pub use vttbr_el2::VTTBR_EL2;
 pub use cntfrq_el0::CNTFRQ_EL0;
 pub use cnthctl_el2::CNTHCTL_EL2;
 pub use cntp_ctl_el0::CNTP_CTL_EL0;
@@ -99,4 +101,3 @@ pub use ttbr0_el2::TTBR0_EL2;
 pub use ttbr1_el1::TTBR1_EL1;
 pub use vbar_el1::VBAR_EL1;
 pub use vbar_el2::VBAR_EL2;
-
