@@ -21,18 +21,18 @@ register_bitfields! {u64,
 
 
         NV2  OFFSET(45) NUMBITS(1) [
-            adv_virt_enable = 1,
-            adv_virt_disable = 0
+            Disable = 0,
+            Enable = 1
         ],
 
         NV1  OFFSET(43) NUMBITS(1) [
-            trap_nvirt_enable = 1,
-            trap_nvirt_disable = 0
+            Disable = 0,
+            Enable = 1
         ],
 
         NV  OFFSET(42) NUMBITS(1) [
-            nested_virt_enable = 1,
-            nested_virt_disable = 0
+            Disable = 0,
+            Enable = 1
         ],
 
         /// Execution state control for lower Exception levels:
