@@ -7,9 +7,11 @@ use tock_registers::{
 
 register_bitfields! {u64,
     pub VTTBR_EL2 [
-        S OFFSET(4) NUMBITS(1) [
-            Aarch32 = 1,
-            Aarch64 = 0
+        VMID OFFSET(48) NUMBITS(16) [],
+        BADDR OFFSET(1) NUMBITS(47) [],
+        CNP OFFSET(0) NUMBITS(1) [
+            Enable = 1,
+            Disable = 0
         ]
     ]
 }
