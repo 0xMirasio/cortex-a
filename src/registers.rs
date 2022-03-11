@@ -54,11 +54,7 @@ mod vbar_el1;
 mod vttbr_el2;
 mod vbar_el2;
 mod vtcr_el2;
-mod stage1_page_descriptor;
-mod stage1_table_descriptor;
 
-pub use stage1_table_descriptor::STAGE1_TABLE_DESCRIPTOR;
-pub use stage1_page_descriptor::STAGE1_PAGE_DESCRIPTOR;
 pub use vtcr_el2::VTCR_EL2;
 pub use vttbr_el2::VTTBR_EL2;
 pub use cntfrq_el0::CNTFRQ_EL0;
