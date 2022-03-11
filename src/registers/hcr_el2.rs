@@ -67,6 +67,12 @@ register_bitfields! {u64,
             Disable = 0,
             Enable = 1
         ],
+
+        E2H OFFSET(34) NUMBITS(1) [
+            Disable = 0,
+            Enable = 1
+        ],
+
         
 
 
