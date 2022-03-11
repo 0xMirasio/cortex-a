@@ -63,6 +63,10 @@ register_bitfields! {u64,
             Enable = 1
         ],
 
+        TGE OFFSET(21) NUMBITS(1) [
+            Disable = 0,
+            Enable = 1
+        ]
         
 
 
